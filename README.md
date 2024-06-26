@@ -11,7 +11,7 @@ A simple online forum application built with Flask and MongoDB. This application
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3.11 or later
 - MongoDB (local or Atlas)
 
 ## Installation
