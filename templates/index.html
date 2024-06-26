@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forum</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Forum</h1>
+        <a href="{{ url_for('create') }}">Create New Post</a>
+        <ul>
+            {% for post in docs %}
+            <li>
+                <h2><a href="{{ url_for('post_detail', id=post._id) }}">{{ post.title }}</a></h2>
+                <p>{{ post.content }}</p>
+                <a href="{{ url_for('edit', id=post._id) }}">Edit</a>
+                <a href="{{ url_for('delete', id=post._id) }}">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
